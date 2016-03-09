@@ -126,7 +126,7 @@ def insereMatriz():
 		if not coef.isalpha():
 			matrizEntrada.append(linhaEntrada)	
 			
-	print("matrizEntrada "+str(matrizEntrada))		
+	#print("matrizEntrada "+str(matrizEntrada))		
 	tamAnterior = 0		
 	for linha in range(len(matrizEntrada)):
 		if linha == 0:
