@@ -63,8 +63,8 @@ def MetodoGauss(matrizEntrada) :
 	qntColunas = len(matrizEntrada[0])-1
 
 	if not testeLinhas(matrizEntrada) or not testeColunas(matrizEntrada):
-		print("A matriz não obedece aos critérios das linhas/colunas. Não é possivel garantir sua convergência")
-		print("Serão efetuadas mudanças na posição das linhas da matriz, para que se adequem ao critério das linhas")
+		#print("A matriz não obedece aos critérios das linhas/colunas. Não é possivel garantir sua convergência")
+		#print("Serão efetuadas mudanças na posição das linhas da matriz, para que se adequem ao critério das linhas")
 		matrizEntrada = correcaoLinhas(matrizEntrada)
 
 	#eliminação
