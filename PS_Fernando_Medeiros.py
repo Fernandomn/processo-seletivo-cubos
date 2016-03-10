@@ -70,13 +70,14 @@ def MetodoGauss(matrizEntrada) :
 	#eliminação
 	for j in range(qntLinhas-1):		
 		itemDiagonalPrincipal = matrizEntrada[j][j]
-		if itemDiagonalPrincipal!=0:			
+		if itemDiagonalPrincipal!=0:
+			#print("matrizEntrada "+str(matrizEntrada))
 			for i in range(j+1, qntLinhas):
 				itemLinha = matrizEntrada[i][j]				
 				multiplicador = float(itemLinha/itemDiagonalPrincipal)
 				for k in range(len(matrizEntrada[i])):
-					if(matrizEntrada[i][k] != itemDiagonalPrincipal):						
-						matrizEntrada[i][k] = float(matrizEntrada[i][k] - multiplicador*matrizEntrada[j][k])
+					if((i,k)!=(j,j)):
+						matrizEntrada[i][k] = float(matrizEntrada[i][k] - multiplicador*matrizEntrada[j][k])				
 		else:
 			print("O sistema apresentou o valor nulo na diagonal principal. Ele não tem solução real (impossível ou indeterminado).")
 			return []
